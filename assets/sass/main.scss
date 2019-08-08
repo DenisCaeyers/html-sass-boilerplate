@@ -1,0 +1,742 @@
+$title-font: "Cormorant", sans-serif;
+$regular-font: "Open Sans Condensed", sans-serif;
+
+$yellow-color: #ffcc00;
+
+@import "general";
+@import "mobile";
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+.hide-mobile {
+  display: block;
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+}
+
+.hide-desktop {
+  display: block;
+  @media only screen and (min-width: 600px) {
+    display: none;
+  }
+}
+
+h4 {
+  font-family: $title-font;
+}
+
+/*@media (max-width: 576px) { 
+    .container1 {
+        .slogun {
+            p {
+                font-size: 3.5rem;
+            }
+        }
+    }
+    .container2 {
+        .p2info {
+            font-size: 1.3rem;
+        }
+    }
+    .container3 {
+        .p3info {
+            font-size: 1.3rem;
+        }
+        .p3imgInfo {
+            font-size: 1.3rem;
+        }
+    }
+    .container5 {
+        .p5info {
+            font-size: 1.2rem;
+        }
+    }
+    .container6 {
+        .p6info {
+            font-size: 1.2rem;
+        }
+    }
+    .container7 {
+        .p7info {
+            font-size: 1.2rem;
+        }
+    }
+    .container9 {
+        .p9info {
+            font-size: 1.2rem;
+        }
+    }
+    .container10 {
+        .p10info1 {
+            font-size: 1.2rem;
+        }
+        .p10info2 {
+            font-size: 1.2rem;
+        }
+    }
+    .container11 {
+        .p11title {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .p11info {
+            font-size: 1.2rem;
+        }
+    }
+    .container12 {
+        .p12title {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .p12img2 {
+            margin-top: 100px;
+        }
+        .p12info {
+            font-size: 1.2rem;
+        }
+    }
+    .container13 {
+        .p13title {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .p13info1 {
+            font-size: 1.2rem;
+        }
+        .p13info2 {
+            font-size: 1.2rem;
+            h4{
+                font-family: $title-font;
+            }
+        }
+    }
+    .container16 {
+        .p16info1 {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .p16info2 {
+            font-size: 1.5rem;
+        }
+    }
+    .container17 {
+        .p17title1 {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .p17imgInfo1 {
+            font-size: 1.2rem;
+        }
+        .p17imgInfo2 {
+            font-size: 1.2rem;
+        }
+        .p17title2 {
+            margin-top: 20px;
+        }
+        .p17info2 {
+            font-size: 1.4rem;
+        }
+    }
+    .container18 {
+        .p18info {
+            font-size: 1.8rem;
+        }
+    }
+    .container20 {
+        grid-template-columns: 150px 980px 150px !important;
+        .p20title {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .p20info1 {
+            font-size: 1.4rem;
+        }
+        .p20info2 {
+            p:nth-child(2) {
+                left: 250px !important;
+            }
+            p:nth-child(3) {
+                right: 530px !important;
+                top: 270px !important;
+                font-size: 2rem;
+            }
+        }
+        .p20info3 {
+            p:nth-child(1) {
+                left: 350px !important;
+                font-size: 5rem !important;
+            }
+            p:nth-child(2) {
+                top: 100px !important;
+                font-size: 2rem !important;
+            }
+        }
+    }
+    .container23 {
+        .p23title1 {
+            p {
+                font-size: 1.8rem;
+            }
+        }
+        .p23imgInfo1 {
+            font-size: 1.2rem;
+        }
+        .p23imgInfo2 {
+            font-size: 1.2rem;
+        }
+        .p23imgInfo3 {
+            font-size: 1.2rem;
+        }
+    }
+    .container24 {
+        grid-template-rows: 300px 400px 400px 200px 300px 100px !important;
+        .p24title1 {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .p24info1 {
+            font-size: 1.2rem;
+        }
+        .p24info2 {
+            font-size: 1.2rem;
+        }
+        .p24title2 {
+            p {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) { 
+    .container1 {
+        .slogun {
+            p {
+                font-size: 2.5rem;
+            }
+        }
+        .p1img {
+            img {
+                height: 650px !important;
+                right: 200px;
+            }
+        }
+    }
+    .container2 {
+        grid-template-columns: 25% 25% 50% !important;
+        .p2img {
+            img:nth-child(1){
+                left: -900px !important;
+            }
+            img:nth-child(2){
+                -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1)20%, rgba(0, 0, 0, 0)) !important;
+                mask-image: linear-gradient(to right, rgba(0, 0, 0, 1)20%, rgba(0, 0, 0, 0)) !important;
+            }
+        }
+        .p2infoTitle {
+            h2 {
+                font-size: 3rem !important;
+            }
+        }
+        .p2info {
+            font-size: 1.2rem !important;
+            z-index: 1;
+        }
+    }
+    .container3 {
+        grid-template-columns: 50% 50% !important;
+        .p3info {
+            font-size: 1rem !important;
+        }
+        .p3imgInfo {
+            font-size: 1.3rem !important;
+        }
+        .p3img {
+            img:nth-child(1){
+                right: -470px !important;
+            }
+            img:nth-child(2){
+                right: -200px !important;
+                -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1)50%, rgba(0, 0, 0, 0)) !important;
+                mask-image: linear-gradient(to left, rgba(0, 0, 0, 1)50%, rgba(0, 0, 0, 0)) !important;
+            }
+        }
+    }
+    .container5 {
+        .p5info {
+            font-size: 1.2rem;
+        }
+    }
+    .container6 {
+        .p6info {
+            font-size: 1.2rem;
+        }
+    }
+    .container7 {
+        .p7info {
+            font-size: 1.2rem;
+        }
+    }
+    .container8 {
+        .p8info {
+            font-size: 2rem !important;
+        }
+    }
+    .container9 {
+        grid-template-columns: 10% 20% 20% 5% 40% 5% !important;
+        .p9title {
+            h1 {
+                font-size: 2rem !important;
+            }
+            p {
+                font-size: 1.4rem !important;
+            }
+        }
+        .p9img2 {
+            img:nth-child(1) {
+                height: 150px !important;
+            }
+            img:nth-child(2) {
+                height: 150px !important;
+            }
+        }
+        .p9info {
+            font-size: 1rem;
+        }
+    }
+    .container10 {
+        .p10info1 {
+            font-size: 1.2rem;
+        }
+        .p10info2 {
+            font-size: 1.2rem;
+        }
+    }
+    .container11 {
+        .p11title {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .p11info {
+            font-size: 1.2rem;
+        }
+    }
+    .container12 {
+        .p12title {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .p12img2 {
+            margin-top: 100px;
+        }
+        .p12info {
+            font-size: 1.2rem;
+        }
+    }
+    .container13 {
+        .p13title {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .p13info1 {
+            font-size: 1.2rem;
+        }
+        .p13info2 {
+            font-size: 1.2rem;
+        }
+    }
+    .container16 {
+        .p16info1 {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .p16info2 {
+            font-size: 1.5rem;
+        }
+    }
+    .container17 {
+        .p17title1 {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .p17imgInfo1 {
+            font-size: 1.2rem;
+        }
+        .p17imgInfo2 {
+            font-size: 1.2rem;
+        }
+        .p17title2 {
+            margin-top: 20px;
+        }
+        .p17info2 {
+            font-size: 1.4rem;
+        }
+    }
+    .container18 {
+        .p18info {
+            font-size: 1.8rem;
+        }
+    }
+    .container20 {
+        grid-template-columns: 150px 980px 150px !important;
+        .p20title {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .p20info1 {
+            font-size: 1.4rem;
+        }
+        .p20info2 {
+            p:nth-child(2) {
+                left: 250px !important;
+            }
+            p:nth-child(3) {
+                right: 530px !important;
+                top: 270px !important;
+                font-size: 2rem;
+            }
+        }
+        .p20info3 {
+            p:nth-child(1) {
+                left: 350px !important;
+                font-size: 5rem !important;
+            }
+            p:nth-child(2) {
+                top: 100px !important;
+                font-size: 2rem !important;
+            }
+        }
+    }
+    .container23 {
+        .p23title1 {
+            p {
+                font-size: 1.8rem;
+            }
+        }
+        .p23imgInfo1 {
+            font-size: 1.2rem;
+        }
+        .p23imgInfo2 {
+            font-size: 1.2rem;
+        }
+        .p23imgInfo3 {
+            font-size: 1.2rem;
+        }
+    }
+    .container24 {
+        grid-template-rows: 300px 400px 400px 200px 300px 100px !important;
+        .p24title1 {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .p24info1 {
+            font-size: 1.2rem;
+        }
+        .p24info2 {
+            font-size: 1.2rem;
+        }
+        .p24title2 {
+            p {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 922px) { 
+    .container1 {
+        .slogun {
+            p {
+                font-size: 2.5rem;
+            }
+        }
+        .p1img {
+            img {
+                height: 650px !important;
+                right: 200px;
+            }
+        }
+    }
+    .container2 {
+        grid-template-columns: 25% 25% 50% !important;
+        .p2img {
+            img:nth-child(1){
+                left: -900px !important;
+            }
+            img:nth-child(2){
+                -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1)20%, rgba(0, 0, 0, 0)) !important;
+                mask-image: linear-gradient(to right, rgba(0, 0, 0, 1)20%, rgba(0, 0, 0, 0)) !important;
+            }
+        }
+        .p2info {
+            font-size: 1.3rem;
+            z-index: 1;
+        }
+    }
+    .container3 {
+        grid-template-columns: 50% 50% !important;
+        .p3info {
+            font-size: 1.3rem;
+        }
+        .p3imgInfo {
+            font-size: 1.3rem;
+        }
+        .p3img {
+            img:nth-child(1){
+                right: -470px !important;
+            }
+            img:nth-child(2){
+                -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1)20%, rgba(0, 0, 0, 0)) !important;
+                mask-image: linear-gradient(to left, rgba(0, 0, 0, 1)20%, rgba(0, 0, 0, 0)) !important;
+            }
+        }
+    }
+    .container5 {
+        .p5info {
+            font-size: 1.2rem;
+        }
+    }
+    .container6 {
+        .p6info {
+            font-size: 1.2rem;
+        }
+    }
+    .container7 {
+        .p7info {
+            font-size: 1.2rem;
+        }
+    }
+    .container9 {
+        grid-template-columns: 10% 20% 20% 5% 40% 5% !important;
+        .p9info {
+            font-size: 1.2rem;
+        }
+    }
+    .container10 {
+        grid-template-columns: 	25% 40% 30% 5% !important;
+        .p10info1 {
+            font-size: 1.2rem;
+            img:nth-child(3) {
+                margin: 10px !important;
+            }
+            img:nth-child(4) {
+                margin: 10px !important;
+            }
+            button {
+                margin: 10px !important;
+            }
+        }
+        .p10img1 { 
+            img:nth-child(1) {
+                height: 200px !important;
+            }
+        }
+        .p10info2 {
+            font-size: 1.2rem;
+        }
+        .p10img2 { 
+            img:nth-child(1) {
+                height: 150px !important;
+            }
+        }
+    }
+    .container11 {
+        grid-template-columns: 10% 20% 20% 15% 35% !important;
+        .p11img2{ 
+            img:nth-child(1) {
+                height: 200px !important;
+            }
+        }
+        .p11title {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .p11info {
+            font-size: 1.2rem;
+        }
+    }
+    .container12 {
+        .p12title {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .p12img2 {
+            margin-top: 100px;
+        }
+        .p12info {
+            font-size: 1.2rem;
+        }
+    }
+    .container13 {
+        grid-template-columns: 25% 35% 35% 5% !important;
+        .p13title {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .p13info1 {
+            font-size: 1.2rem;
+        }
+        .p13info2 {
+            font-size: 1.2rem;
+        }
+    }
+    .container16 {
+        .p16info1 {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .p16info2 {
+            font-size: 1.5rem;
+        }
+        .p16wrapper {
+            grid-template-columns: 5% 15% 75% 5% !important;
+            .p16title { 
+                font-size: 2rem !important;
+            }
+        }
+    }
+    .container17 {
+        grid-template-columns: 25% 35% 35% 5% !important;
+        .p17title1 {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .p17imgInfo1 {
+            font-size: 1.2rem;
+        }
+        .p17imgInfo2 {
+            font-size: 1.2rem;
+        }
+        .p17title2 {
+            margin-top: 20px;
+        }
+        .p17info2 {
+            font-size: 1.4rem;
+        }
+    }
+    .container18 {
+        grid-template-columns: 30% 60% 10% !important;
+        .p18info {
+            font-size: 1.8rem;
+        }
+    }
+    .container19 {
+        grid-template-columns: 30% 60% 10% !important;
+        grid-template-areas: ". p19title .";
+        .p19title {
+            grid-area: p19title;
+        }
+    }
+    .container20 {
+        grid-template-columns: 30% 68% 2% !important;
+        .p20title {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .p20info1 {
+            font-size: 1.1rem;
+        }
+        .p20info2 {
+            p:nth-child(2) {
+                left: 250px !important;
+            }
+            p:nth-child(3) {
+                right: 530px !important;
+                top: 270px !important;
+                font-size: 2rem;
+            }
+        }
+        .p20info3 {
+            p:nth-child(1) {
+                left: 350px !important;
+                font-size: 5rem !important;
+            }
+            p:nth-child(2) {
+                top: 100px !important;
+                font-size: 2rem !important;
+            }
+        }
+    }
+    .container23 {
+        .p23title1 {
+            p {
+                font-size: 1.8rem;
+            }
+        }
+        .p23imgInfo1 {
+            font-size: 1.2rem;
+        }
+        .p23imgInfo2 {
+            font-size: 1.2rem;
+        }
+        .p23imgInfo3 {
+            font-size: 1.2rem;
+        }
+    }
+    .container24 {
+        grid-template-columns: 25% 25% 25% 25% !important;
+        .p24title1 {
+            h2 {
+                font-size: 2.5rem !important;
+            }
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .p24info1 {
+            font-size: 1.2rem;
+        }
+        .p24img1 {         
+            img:nth-child(1) {
+                margin: 50px;
+                height: 200px !important;
+            }
+        }
+        .p24img2 {
+            img {
+                height: 240px !important;
+                top: -20px !important;
+                left: -80px;
+            }
+        }
+        .p24info2 {
+            font-size: 1.2rem;
+        }
+        .p24title2 {
+            h2 {
+                font-size: 2.5rem !important;
+            }
+            p {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+*/
