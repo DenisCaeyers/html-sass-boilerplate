@@ -1,3 +1,4 @@
+// packages
 const gulp = require("gulp");
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
@@ -6,7 +7,10 @@ const cssnano = require("cssnano");
 const sourcemaps = require("gulp-sourcemaps");
 const browserSync = require("browser-sync").create();
 
-// variables
+// SASS config
+sass.compiler = require("node-sass");
+
+// Variables
 var paths = {
   styles: {
     src: "./assets/public/sass/**/*.scss",
@@ -25,8 +29,7 @@ var paths = {
   }
 };
 
-sass.compiler = require("node-sass");
-
+// SASS Compile Function
 function style() {
   return gulp
     .src(paths.styles.src)
@@ -38,10 +41,12 @@ function style() {
     .pipe(browserSync.stream());
 }
 
+// Copy JS Files to destination folder
 function js() {
   return gulp.src(paths.js.src).pipe(gulp.dest(paths.js.dest));
 }
 
+// Copy Image files to destination folder and stream to browser
 function img() {
   return gulp
     .src(paths.img.src)
@@ -49,6 +54,7 @@ function img() {
     .pipe(browserSync.stream());
 }
 
+// Watch function
 function watch() {
   browserSync.init({
     server: {
@@ -65,6 +71,7 @@ function watch() {
   gulp.watch(paths.html.src).on("change", browserSync.reload);
 }
 
+// Export to public
 exports.style = style;
 exports.js = js;
 exports.img = img;
