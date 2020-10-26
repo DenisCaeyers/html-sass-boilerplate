@@ -13,7 +13,7 @@ sass.compiler = require("node-sass");
 // Variables
 var paths = {
   styles: {
-    src: "./assets/public/sass/**/*.scss",
+    src: "./assets/src/sass/**/*.scss",
     dest: "./assets/public/css"
   },
   html: {
