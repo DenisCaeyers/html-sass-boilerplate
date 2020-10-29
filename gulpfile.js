@@ -17,7 +17,7 @@ var paths = {
     dest: "./assets/public/css"
   },
   html: {
-    src: "./*.html"
+    src: "./**/*.html"
   },
   js: {
     src: "./assets/src/js/**/*.js",
